@@ -150,12 +150,14 @@ $.fn.more = function(options) {
     container.append(up);
     container.append(down);
 
+    // FIXME: Don't repeat myself
     up.on("click touchstart", function() {
       var scrollTop = parent.scrollTop() - scrollAmount;
-      if(smoothScroll) scrollable.animate({scrollTop: scrollTop}, 1000);
-      else scrollable.scrollTop(scrollTop);
+      if(smoothScroll) parent.animate({scrollTop: scrollTop}, 1000);
+      else parent.scrollTop(scrollTop);
     });
 
+    // FIXME: Don't repeat myself
     down.on("click touchstart", function() {
       var scrollTop = parent.scrollTop() + scrollAmount;
       if(smoothScroll) parent.animate({scrollTop: scrollTop}, 1000);
