@@ -1,3 +1,10 @@
+/*
+  This is free and unencumbered software released into the public domain.
+  -- 2014, Liudmil Mitev
+
+  Git repo: https://github.com/liudmil-mitev/jquery.fn.more.js
+*/
+
 (function($) {
 
 SCROLL_CONTAINER     = "<div class='jquery-fn-more container'></div>";
